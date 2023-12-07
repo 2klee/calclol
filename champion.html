@@ -47,7 +47,7 @@
         </nav>
     
         
-    <div class="container-fluid">        
+    <div class="container-fluid">
         <div class="row my-5"></div>
         <div class="row">
             <div class="col-sm-2 show-border mx-auto px-1" id="left-side" style="display: none;">
@@ -65,10 +65,10 @@
                             <p class="resource-text text-white font-weight-bold" id="left-rsc-text" data-toggle="tooltip" data-placement="bottom" data-title="Mana" data-original-title="Champion does not use mana" title="">Manaless</p>
                     </div>
                     <div class="col px-1">
-                        <img class="portrait img-fluid mx-auto champ-img" src="" name="" id="left-champ-portrait" data-toggle="tooltip" data-placement="bottom">
+                        
                         <div class="dropright">
-                            <button class="btn btn-blue dropdown-toggle btn-block mt-1" type="button" id="left-champ-dropdown" data-toggle="dropdown">
-                                Champions
+                            <button class="btn btn-blue  btn-block mt-1" type="button" id="left-champ-dropdown" data-toggle="dropdown">
+                                <img class="portrait img-fluid mx-auto champ-img" src="" name="" id="left-champ-portrait" data-toggle="tooltip" data-placement="bottom">
                             </button>
                             <div class="dropdown-menu dropdown-multicol" id="left-champ-list">
                                 <input class="form-control mx-auto my-0 sticky" type="text" placeholder="Search..." id="left-champ-search" autocomplete="off">
@@ -1170,6 +1170,9 @@
                 <div class="row">
                     <div class="col px-1 mt-1"> 
                         <div class="dropdown" id="left-level" data-value="1">
+                            <div class="col-9 px-0">
+                                <button type="button" class="btn btn-blue btn-xs mx-auto btn-block" id="left-auto-attack">Basic Attack</button>
+                            </div>
                             <button class="btn btn-blue dropdown-toggle btn-block" type="button" id="left-level-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Level - 1
                             </button>
@@ -4697,10 +4700,10 @@
             <div class="show-border mx-auto text-center col-sm-2" id="right-champ">
                 <div class="row">
                     <div class="col px-1">
-                        <img class="portrait img-fluid mx-auto champ-img sprite-Aatrox" src="" name="Aatrox" id="right-champ-portrait" data-toggle="tooltip" data-placement="bottom" data-original-title="Aatrox" style="width: 45%; padding-top: 45%;">
+                        
                         <div class="dropleft">
                             <button class="btn btn-red dropdown-toggle btn-block mt-1" type="button" id="right-champ-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Champions
+                                <img class="portrait img-fluid mx-auto champ-img sprite-Aatrox" src="" name="Aatrox" id="right-champ-portrait" data-toggle="tooltip" data-placement="bottom" data-original-title="Aatrox" style="width: 45%; padding-top: 45%;">
                             </button>
                             <div class="dropdown-menu dropdown-multicol" id="right-champ-list" aria-labelledby="dropdownMenuButton">
                                 <input class="form-control mx-auto my-0 sticky" type="text" placeholder="Search..." id="right-champ-search" autocomplete="off">

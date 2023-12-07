@@ -41,8 +41,12 @@ body { word-break:keep-all ; font-family: 'Noto Sans KR', sans-serif; font-size:
 #header .util { display: flex; margin: 0 0 0 auto; gap: 30px;}
 #header .util button { padding: 5px ; height: 30px ; background: #fff; font-size: 15px; font-weight: 700; }
 
-#main #sec1 { position: relative; }
-#main #sec1 .video { width: 100%;}
+#main #sectionB { position: relative; }
+#main #sectionB .video { width: 100%;}
 
-#main #sec2 { position: absolute; top: 300px; color: #000000;}
-#main #sec2 .inner {  margin: 0 auto; align-items: center; width: 1200px; background: #ffffff; }
+#main #sectionF { position: absolute; top: 200px; width: 100%; display: flex; justify-content: center; }
+#main #sectionF #dealmeterL { padding: 20px; width:calc(100%/3); height: 700px; background: #ffffff;}
+
+#main #sectionF #dealmeterR { padding: 20px; width:calc(100%/3); height: 700px; background: #ffffff;}
+
+
