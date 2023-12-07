@@ -1,9 +1,13 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text&family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 html {
     height: 100%;
     box-sizing: border-box;
 }
 
 body {
+    
     position: relative;
     margin: 0;
     padding-bottom: 10rem;
@@ -13,7 +17,10 @@ body {
 }
 
 .navbar {
+    padding: 15px 200px;
     border-bottom: 1px solid rgb(0, 0, 0);
+    background-color: #598EFF;
+    font-weight:700;
 }
 
 .footer {
@@ -23,7 +30,7 @@ body {
     bottom: 0;
     width: 100%;
     text-align: center;
-    color: white;
+    color: rgb(0, 0, 0);
     font-size: 0.8em;
 }
 

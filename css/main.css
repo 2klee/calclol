@@ -33,7 +33,7 @@ body { word-break:keep-all ; font-family: 'Noto Sans KR', sans-serif; font-size:
 
 /* 초기화  E */
 
-#header { align-items: center;  background: #000000; color: rgb(255, 255, 255);}
+#header { align-items: center;  background: #598EFF; color: rgb(255, 255, 255);}
 #header .inner { padding: 20px; display: flex; align-items: center;}
 #header .inner h1 { padding: 0px 50px 0px 0px;}
 #header .gnb { display: flex; gap: 30px; }
