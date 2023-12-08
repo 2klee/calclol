@@ -3,10 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-       
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+
+           
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">   <!-- 파비콘 -->
+    
     <link rel="stylesheet" type="text/css" href="css/main.css">
     <link rel="stylesheet" type="text/css" href="css/dropdowns.css">
     <link rel="stylesheet" type="text/css" href="css/champion-sprites.css">
@@ -14,10 +17,13 @@
     <link rel="stylesheet" type="text/css" href="css/rune-sprites.css">
     <link rel="stylesheet" type="text/css" href="css/spell-sprites.css">
     <link rel="stylesheet" type="text/css" href="css/passive-sprites.css">
+    
 
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+    
 
     <title>Calc.lol</title>     <!-- 타이틀 -->
 </head>
@@ -50,10 +56,14 @@
         <!-- 메인영역 -->
         <main id="main">
             <section id="sectionB"> <!-- 배경영상 -->
-                <video class="video" src="https://www.leagueoflegends.com/static/hero-blurred-77cd03702790edd87c7609df91d5c7d5.mp4" autoplay muted loop></video>
+                <video class="video" src="./resource/mov/bgMove.webm" autoplay muted loop></video>
+                
             </section> <!-- 배경영상 E -->
             <section id="sectionF">
                 <div id="dealmeterL">
+                    <td>
+                        
+                    </td>                    
                     <ul class="ul_top"> <!-- 게이지 박스 -->
                         <li>
                             <div class="health-box rounded"> <!-- HP 박스 -->
@@ -67,1116 +77,86 @@
                             </div>
                         </li>
                     </ul> <!-- 게이지 박스 E -->
-                    <ul> 
+
+                    <ul class="share_ul ds_flex"> <!-- 플레이어 표시 및 공유버튼 -->                        
+                        <li><button type="button" class="share_Btn">공유</button></li>
+                        <li class="txt_player"><p>Player</p></li>
+                    </ul> <!-- 플레이어 표시 및 공유버튼 E -->
+
+                    <ul class="item_save ds_flex">
                         <li>
+                            <ul> <!-- 아이템 저장버튼 -->
+                            <li><button type="button" class="saveItemBtn" >1</button></li>
+                            <li><button type="button" class="saveItemBtn" >2</button></li>
+                            <li><button type="button" class="saveItemBtn" >3</button></li>
+                            </ul> <!-- 아이템 저장버튼 E-->
+                        </li>
+                        
+                        <li c>
                             <div class="col px-1">
                         
-                                <div class="dropright">
+                                <div class="dropright"> <!-- 챔피언 박스 -->
                                     <button class="btn btn-blue mt-1" type="button" id="left-champ-dropdown" data-toggle="dropdown">
                                         <img class="portrait img-fluid mx-auto champ-img" src="" name="" id="left-champ-portrait" data-toggle="tooltip" data-placement="bottom">
                                     </button>
-                                    <div class="dropdown-menu dropdown-multicol" id="left-champ-list">
-                                        <input class="form-control mx-auto my-0 sticky" type="text" placeholder="Search..." id="left-champ-search" autocomplete="off">
-                                        <div class="row mx-auto">
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Aatrox">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Aatrox</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Ahri">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Ahri</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Akali">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Akali</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Alistar">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Alistar</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Amumu">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Amumu</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Anivia">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Anivia</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Annie">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Annie</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Aphelios">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Aphelios</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Ashe">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Ashe</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-AurelionSol">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Aurelion Sol</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Azir">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Azir</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Bard">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Bard</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Blitzcrank">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Blitzcrank</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Brand">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Brand</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Braum">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Braum</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Caitlyn">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Caitlyn</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Camille">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Camille</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Cassiopeia">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Cassiopeia</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Chogath">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Cho&#39;Gath</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Corki">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Corki</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Darius">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Darius</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Diana">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Diana</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-DrMundo">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Dr. Mundo</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Draven">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Draven</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Ekko">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Ekko</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Elise">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Elise</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Evelynn">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Evelynn</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Ezreal">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Ezreal</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Fiddlesticks">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Fiddlesticks</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Fiora">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Fiora</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Fizz">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Fizz</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Galio">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Galio</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Gangplank">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Gangplank</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Garen">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Garen</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Gnar">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Gnar</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Gragas">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Gragas</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Graves">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Graves</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Gwen">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Gwen</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Hecarim">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Hecarim</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Heimerdinger">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Heimerdinger</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Illaoi">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Illaoi</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Irelia">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Irelia</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Ivern">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Ivern</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Janna">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Janna</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-JarvanIV">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Jarvan IV</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Jax">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Jax</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Jayce">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Jayce</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Jhin">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Jhin</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Jinx">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Jinx</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Kaisa">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kai&#39;Sa</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Kalista">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kalista</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Karma">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Karma</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Karthus">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Karthus</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Kassadin">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kassadin</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Katarina">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Katarina</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Kayle">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kayle</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Kayn">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kayn</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Kennen">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kennen</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Khazix">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kha&#39;Zix</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Kindred">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kindred</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Kled">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kled</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-KogMaw">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Kog&#39;Maw</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Leblanc">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">LeBlanc</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-LeeSin">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Lee Sin</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Leona">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Leona</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Lillia">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Lillia</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Lissandra">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Lissandra</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Lucian">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Lucian</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Lulu">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Lulu</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Lux">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Lux</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Malphite">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Malphite</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Malzahar">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Malzahar</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Maokai">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Maokai</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-MasterYi">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Master Yi</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-MissFortune">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Miss Fortune</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Mordekaiser">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Mordekaiser</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Morgana">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Morgana</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Nami">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Nami</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Nasus">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Nasus</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Nautilus">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Nautilus</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Neeko">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Neeko</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Nidalee">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Nidalee</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Nocturne">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Nocturne</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Nunu">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Nunu &amp; Willump</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Olaf">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Olaf</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Orianna">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Orianna</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Ornn">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Ornn</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Pantheon">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Pantheon</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Poppy">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Poppy</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Pyke">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Pyke</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Qiyana">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Qiyana</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Quinn">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Quinn</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Rakan">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Rakan</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Rammus">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Rammus</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-RekSai">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Rek&#39;Sai</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Rell">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Rell</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Renekton">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Renekton</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Rengar">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Rengar</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Riven">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Riven</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Rumble">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Rumble</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Ryze">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Ryze</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Samira">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Samira</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Sejuani">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Sejuani</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Senna">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Senna</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Seraphine">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Seraphine</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Sett">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Sett</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Shaco">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Shaco</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Shen">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Shen</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Shyvana">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Shyvana</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Singed">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Singed</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Sion">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Sion</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Sivir">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Sivir</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Skarner">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Skarner</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Sona">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Sona</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Soraka">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Soraka</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Swain">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Swain</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Sylas">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Sylas</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Syndra">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Syndra</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-TahmKench">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Tahm Kench</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Taliyah">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Taliyah</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Talon">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Talon</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Taric">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Taric</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Teemo">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Teemo</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Thresh">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Thresh</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Tristana">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Tristana</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Trundle">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Trundle</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Tryndamere">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Tryndamere</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-TwistedFate">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Twisted Fate</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Twitch">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Twitch</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Udyr">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Udyr</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Urgot">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Urgot</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Varus">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Varus</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Vayne">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Vayne</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Veigar">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Veigar</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Velkoz">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Vel&#39;Koz</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Vi">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Vi</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Viego">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Viego</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Viktor">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Viktor</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Vladimir">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Vladimir</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Volibear">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Volibear</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Warwick">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Warwick</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-MonkeyKing">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Wukong</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Xayah">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Xayah</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Xerath">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Xerath</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-XinZhao">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Xin Zhao</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Yasuo">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Yasuo</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Yone">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Yone</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Yorick">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Yorick</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Yuumi">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Yuumi</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Zac">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Zac</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Zed">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Zed</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Ziggs">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Ziggs</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Zilean">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Zilean</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Zoe">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Zoe</p>
-                                                </div>
-                                            </div>
-                                        
-                                            <div class="col-3 bg-hover pt-2">
-                                                <img class="portrait champion-sprite sprite-Zyra">
-                                                <div class="row">
-                                                    <p class="text-center champ-name mx-auto">Zyra</p>
-                                                </div>
-                                            </div>
-                                          
-                                        </div>
-                                    </div>                                     
-                                </div>
+                                </div>    <!-- 챔피언 박스 E-->
                             </div>
-                       
-                            
-                           
                         </li>
-                        
                     </ul>                
-                    <ul>
-                        <li>30</li>
-                    </ul>
+                    
+                    <div class="dealmeterLL"> <!-- 레벨 및 베이직 어택 -->
+                        <ul class="ds_flex">
+                            <li class="LV_Show">5</li> <!-- 레벨표시 -->
+                            <li class="LV_Button">4</li> <!-- 레벨 업다운 버튼 -->
+                            <li>
+                                <button type="button" class="BA_button">BasicAttack</button>
+                            </li>
+                        </ul>                        
+                    </div> <!-- 레벨 및 베이직 어택  E-->   
+                    <div> <!-- 스킬 박스 -->
+                        <ul class="ds_flex">
+                            <li class="skill"><button type="button" class="skill_Btn">1</button>
+                                <ul>
+                                    <li class="skill ds_flex">
+                                        <button type="button" class="skill_Lv_Btn dropdown-toggle"></button>
+                                        <input id="LV_Num" type="number" min="0" max="18">                                    
+                                        <button type="button" class="skill_Lv_Btn up"></button>
+                                    </li>
+                                </ul>                            
+                            </li>
+                            <li class="skill"><button type="button" class="skill_Btn">2</button>
+                                <ul>
+                                    <li class="skill ds_flex">
+                                        <button type="button" class="skill_Lv_Btn dropdown-toggle"></button>
+                                        <input id="LV_Num" type="number" min="0" max="18">
+                                        <button type="button" class="skill_Lv_Btn dropdown-toggle_up"></button>
+                                    </li>
+                                </ul> 
+                            </li>
+                            <li class="skill"><button type="button" class="skill_Btn">3</button>
+                                <ul>
+                                    <li class="skill ds_flex">
+                                        <button type="button" class="skill_Lv_Btn dropdown-toggle"></button>
+                                        <input id="LV_Num" type="number" min="0" max="18">
+                                        <button type="button" class="skill_Lv_Btn">2</button>
+                                    </li>
+                                </ul> 
+                            </li>
+                            <li class="skill"><button type="button" class="skill_Btn">4</button>
+                                <ul>
+                                    <li class="skill ds_flex">
+                                        <button type="button" class="skill_Lv_Btn dropdown-toggle"></button>
+                                        <input id="LV_Num" type="number" min="0" max="18">
+                                        <button type="button" class="skill_Lv_Btn"></button>
+                                    </li>
+                                </ul> 
+                            </li>
+                        </ul>                        
+                    </div> <!-- 스킬 박스 E -->
+                    
+                    <div class="state" style=" width: 215px; height: 240px; background-color: aquamarine;"> <!-- 스탯 박스 -->
+
+                    </div>                    
                 </div>
                 <div id="dealmeterR">
                     <ul class="ul_top">
