@@ -107,15 +107,17 @@ body { word-break:keep-all ; font-family: 'Noto Sans KR', sans-serif; font-size:
 .LV_Button { width : 30px; height: 50px; background: turquoise; }
 .BA_button { width: 126px; height: 50px; background: #598EFF; color: #fff;}
 
-#main #sectionF #dealmeterL .skill_Btn { width: 50px; height: 50px; background: #598EFF;}
-#main #sectionF #dealmeterL .skill_Lv_Btn { margin-top: 5px; width: 10px; height: 20px; background: #598EFF; color: #fff;}
-#main #sectionF #dealmeterL .LV_Num { margin-top: 5px; border: 1px solid #000; width: 20px; height: 20px; }
-#main #sectionF #dealmeterL .dropdown-toggle-up { position: relative; }
-#main #sectionF #dealmeterL .dropdown-toggle::after { position: absolute; transform: rotate(180deg); }
+.skill_Btn { width: 50px; height: 50px; background: #598EFF;}
+.skill_Lv_Btn { margin-top: 5px; width: 10px; height: 20px; background: #598EFF; color: #fff;}
+.LV_Num { margin-top: 5px; border: 1px solid #000; width: 20px; height: 20px; }
+.dropdown-toggle-up { position: relative; }
+.dropdown-toggle::after { position: absolute; transform: rotate(180deg); }
 
 .skill_pan { padding: 0 0 5px 0; }
 
-.state { width: 215px; height: 260px; background-color: aquamarine; }
+.stat { width: 215px; height: 255px; background-color: rgb(255, 255, 255); }
+.stat_name { width: 54px; background: #00ddff; }
+.stat_value { width: 54px; background: #78edff;  }
 
 .ul_main_R { width: 310px;}
 .cost { padding: 0 0 5px; }
