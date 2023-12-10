@@ -1,3 +1,4 @@
+
 $(document).ready(function() {
     modifyViewableElements();
     //Enable clicking champs in dropdowns
@@ -71,6 +72,8 @@ $(document).ready(function() {
     resetChildCustomizations();
     $(window).resize(modifyViewableElements);
 });
+
+
 
 //This must be called before initializePortraits()
 function addChampReplacement() {

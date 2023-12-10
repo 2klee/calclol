@@ -49,79 +49,29 @@ body { word-break:keep-all ; font-family: 'Noto Sans KR', sans-serif; font-size:
 #main #sectionB .video { width: 100%;}
 
 #main #sectionF { position: absolute; top: 200px; width: 100%; height: 700px; display: flex; justify-content: center; }
-#main #sectionF #dealmeterL { padding-left: 15px; width:calc(100%/3); background: rgba(255, 255, 255, .8); border-right: 1px solid;}
+#main #sectionF #dealmeterL { padding-left: 15px; width:calc(100%/3); background: rgba(255, 255, 255, .8);}
 
-.ul_main_L { padding: 0 30px 0 0; }
-
-.health-box {
-    /*background-color: lightgray;*/
-    position: relative;
-    /* background-color: black; */
-    width: 90%;
-    height: 2em;
-    margin-top: 1em;
-    border: 0px solid rgb(0, 255, 162);
-}
-
-.health-bar {
-    background-color: rgb(82, 191, 58);
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.resource-box {
-    position: relative;
-    background-color: rgb(0, 101, 252);
-    width: 80%;
-    height: 1em;
-    margin-top: 0.25em;
-    margin-bottom: 1em;
-    border: 0px solid rgb(1, 173, 253);
-}
-
-.resource-bar {
-    background-color: rgb(23, 121, 234);
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.resourceless {
-    background-color: rgb(0, 101, 252);
-}
-
+.share_ul { padding-right: 50px;}
 .share_Btn { width: 50px; height: 30px; background: #bbff00; color: #000000; font-size: small;}
-.txt_player { margin-left: 2px; border: 1px; width: 160px; height: 30px; background: #3967ff; color: #fff; text-align: center;}
-
-.item_save { padding: 0 0 5px 0; }
-.LV_BA { padding: 0 0 5px 0; }
+.txt_player { margin-left: 4px; border: 1px; width: 160px; height: 30px; background: #598EFF; text-align: center;}
 
 #main #sectionF #dealmeterL .saveItemBtn { margin-top: 4px ; width: 50px; height: 50px; background: #598EFF; text-align: center; }
 #main #sectionF #dealmeterL .saveItemBtn:hover { background: #0d34b4; color: #fff;}
+
+.dealmeterLBottomL {width: 220px; background-color: #000000;}
 
 .dealmeterLL { width: 50%; }
 .ds_flex { display: flex; gap: 5px;}
 
 .LV_Show { width : 50px; height: 50px; background: turquoise; }
 .LV_Button { width : 30px; height: 50px; background: turquoise; }
-.BA_button { width: 126px; height: 50px; background: #598EFF; color: #fff;}
+.BA_button { width: 128px; height: 50px; background: #598EFF; color: #fff;}
 
 #main #sectionF #dealmeterL .skill_Btn { width: 50px; height: 50px; background: #598EFF;}
-#main #sectionF #dealmeterL .skill_Lv_Btn { margin-top: 5px; width: 10px; height: 20px; background: #598EFF; color: #fff;}
+#main #sectionF #dealmeterL .skill_Lv_Btn { margin-top: 5px; width: 25%; height: 20px; background: #598EFF; color: #fff;}
 #main #sectionF #dealmeterL .LV_Num { margin-top: 5px; border: 1px solid #000; width: 20px; height: 20px; }
 #main #sectionF #dealmeterL .dropdown-toggle-up { position: relative; }
 #main #sectionF #dealmeterL .dropdown-toggle::after { position: absolute; transform: rotate(180deg); }
-
-.skill_pan { padding: 0 0 5px 0; }
-
-.state { width: 215px; height: 260px; background-color: aquamarine; }
-
-.ul_main_R { width: 310px;}
-.cost { padding: 0 0 5px; }
-.item_pan { display: flex; flex-wrap: wrap; justify-content: space-between; }
-.item_box { width: 100px; height: 100px; background: #ad0099; justify-content: space-between;}
-.log_pan { width: 100%; height: 350px; padding: 20px; background: #2c2e3e; color: #ffffff; }
 
 
 
