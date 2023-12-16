@@ -44,40 +44,51 @@ $.ajax({
 
         var clickItemBox
 
-        function printItems(filteredallItems) {
-            $("#newBox").empty(); // newBox의 초기 값 공백
-            for (var i = 0; i < filteredallItems.length; i++) {
-                var item = filteredallItems[i];
-                var imgURL = "http://ddragon.leagueoflegends.com/cdn/13.24.1/img/item/" + item.image.full;
-                var itemButton = $("<button type='button' class='item_box'><img src='" + imgURL + "' alt='" + item.name + "'></button>"+ item.name)
-
-                // 아이템 이미지 버튼을 클릭하면, 선택한 아이템 박스에 이미지를 설정하고, 다시 클릭하면 초기화
-                itemButton.click(function () {
-                    var imgSrc = $(this).find('img').attr('src');
-                    if (clickItemBox.find('img').length > 0) {
-                        clickItemBox.empty(); // 이미지가 이미 있으면, 초기화
-                    } else {
-                        clickItemBox.html("<img src='" + imgSrc + "' style='border: solid #ff00e1'>"); // 이미지가 없으면 설정
-                        $("#newBox").remove(); // 아이템을 저장하면 #newBox 제거
-                    }
-                });
-                $("#newBox").append(itemButton);
-            }
-        }
-
         // 6개의 각각의 박스에서 원하는 버튼에 클릭할 경우 기능
-            for (var i = 1; i <= 6; i++) {
+        for (var i = 1; i <= 6; i++) {
             // 버튼을 클릭하면 아이템 출력
             $("#iBox" + i).click(function () {
                 // 새로운 박스 생성
                 if ($("#newBox").length === 0) {
-                    $("body").append('<div id="newBox"></div>');
+                    $("body").append('<div id="newBox" class="dropdown-menu dropdown-multicol" aria-labelledby="dropdownMenuButton" x-placement="right-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(228px, 0px, 0px);"></div>');
                 }
                 clickItemBox = $(this);  // 현재 클릭한 아이템 박스를 저장
-                printItems(filteredallItems); // 아이템 출력을 새로운 박스 안으로 변경
+                printItems(filteredallItems, clickItemBox); // 아이템 출력을 새로운 박스 안으로 변경
             });
         }
-     }
+
+        function printItems(filteredallItems, clickItemBox) {
+            // 클릭한 iBox에 새로운 item_pan 생성
+            clickItemBox.find("#left-item-boxContainer").remove();
+            clickItemBox.append('<div id="left-item-boxContainer" class="row mx-auto"></div>');
+
+            for (var i = 0; i < filteredallItems.length; i++) {
+                var item = filteredallItems[i];
+                var imgURL = "http://ddragon.leagueoflegends.com/cdn/13.24.1/img/item/" + item.image.full;
+                var itemButton = $("<button type='button' class='item_box'><img src='" + imgURL + "' alt='" + item.name + "'></button>" + item.name)
+
+                // 아이템 이미지 버튼을 클릭하면, 선택한 아이템 박스에 이미지를 설정하고, 다시 클릭하면 초기화
+                itemButton.click(function () {
+                    var imgSrc = $(this).find('img').attr('src');
+                    var itemPan = clickItemBox.find(".item_pan");
+
+                    if (itemPan.find('img').length > 0) {
+                        // 이미지가 이미 있으면, 초기화하고 newBox 제거
+                        itemPan.find('img').remove();
+                        $("#newBox").remove();
+                    } else {
+                        // 이미지가 없으면 설정
+                        itemPan.html("<img src='" + imgSrc + "' style='border: solid #ff00e1'>");
+                    }
+                });
+
+                clickItemBox.find(".item_pan").append(itemButton);
+            }
+
+        }
+
+
+    }
 });
 $(document).mouseup(function (e) {
     var container = $("#newBox");
