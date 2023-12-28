@@ -22,20 +22,22 @@
 
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-   -webkit-appearance: none;
-   margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 input[type="number"] {
-   -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
 
 /* Popover */
+/* 아이템 설명창 팝오버 */
 .popover {
     border: 2px solid black;
     background-color: rgba(255, 255, 255, 0.9);
     max-width: 25em;
+    font-size: 12px;
 }
- 
+
 /* Background */
 .background {
     background-color: rgb(255, 255, 255)
@@ -53,10 +55,11 @@ input[type="number"] {
 .btn-blue:hover, .btn-blue:focus, .btn-blue:active {
     color : white;
     background-color : rgb(26, 21, 62);
-    
+
 }
 
 .btn-red {
+    padding-top: 7px;
     background-color : rgb(255, 56, 56);
     color : white;
     /* border : 0px solid black; */
@@ -90,11 +93,23 @@ input[type="number"] {
     margin-top: 2.5em;
 }
 
-.dropdown-menu {         
-    max-height: 50em;
+.dropdown-menu {
+    max-height: 60em;
     overflow-y: scroll;
     overflow-x: hidden;
 }
+
+@media (max-width : 768px) {
+    #left-item-filter-options{
+        top: 28%;
+        margin: 0 auto;
+    }
+    #right-item-filter-options {
+        top: 125%;
+    }
+}
+
+
 /* 임시 */
 .champion-box {
     max-height: 50em;
@@ -108,6 +123,16 @@ input[type="number"] {
     margin-right: 10px; */
 }
 
+/* 오른쪽 챔피언 이미지 */
+.right-champion-img {
+    width: 143px;
+    height: 143px;
+    object-fit: cover;
+    /* position: absolute; */
+    top: 10;
+    left: 0;
+}
+
 #champion-search {
     font-size: 16px;
 }
@@ -115,8 +140,8 @@ input[type="number"] {
 #champion-list {
     width: 500px;
     display: flex;
-    flex-wrap: wrap; 
-    justify-self: flex-start;  
+    flex-wrap: wrap;
+    justify-self: flex-start;
     align-items: baseline;
     gap: 4px;
     font-size: 16px;
@@ -175,13 +200,45 @@ input[type="number"] {
     width: 100%;
 }
 
+/* .item-list-css {
+    display: flex;
+    gap: .3125rem;
+} */
+#item-list {
+    display: flex;
+    gap: 1rem;
+}
+#item-listR {
+    display: flex;
+    gap: 1rem;
+}
+/* 
+#item-list p {
+    
+} */
+
 .item-img {
-    width: 80% !important;
-    padding-top: 80% !important;
-    display: block !important;
-    border: 1px solid black;
-    outline: 2px solid black;
-    outline-offset: -2px;
+    width: 100%;
+}
+
+
+.item-name {
+    margin-top: 2px;
+    width: 68px;
+    text-align: center;
+    text-wrap: balance;
+    font-size: 11px;
+    line-height : 1.2;
+}
+/* 아이템 마우스 오버 시 나오는 아이템 설명창 */
+.desBox {
+    position: absolute;
+    width: 150px !important;
+    z-index: 999999;
+    background-color: #ffffff;
+    padding: 0 10px 10px ;
+    border: 1px solid #000000;
+    align-items: auto;
 }
 
 .item-placeholder {
@@ -242,15 +299,17 @@ input[type="number"] {
 
 #left-item-filter-options {
     position: absolute;
-    max-height: 22.65em;
+    min-height: 60em;
+    max-height: 60em;
     width: 15em;
-    margin-top: 2.5em;
+    margin: 2.5em 0 0 0;
     overflow-x: auto;
 }
 
 #right-item-filter-options {
     position: absolute;
-    max-height: 22.65em;
+    min-height: 60em;
+    max-height: 60em;
     width: 15em;
     margin-top: 2.5em;
     overflow-x: auto;
@@ -272,11 +331,11 @@ input[type="number"] {
 .health-text {
     position: absolute;
     bottom: 1.65em;
-    top: calc(100%/2);    
+    top: calc(100%/2);
     left: calc((100%/2));
     font-size: 1em;
     width: 100%;
-    height: 100%;    
+    height: 100%;
 }
 
 
@@ -366,7 +425,7 @@ td.stat-col {
 }
 
 .selected-rune {
-    box-shadow: 0px 0px 0px 1px rgb(176, 176, 176) inset;   
+    box-shadow: 0px 0px 0px 1px rgb(176, 176, 176) inset;
     border-radius: 10px;
 }
 
@@ -382,11 +441,11 @@ td.stat-col {
 }
 
 @-webkit-keyframes fade {
-    from {opacity: .4} 
+    from {opacity: .4}
     to {opacity: 1}
 }
 
 @keyframes fade {
-    from {opacity: .4} 
+    from {opacity: .4}
     to {opacity: 1}
 }
